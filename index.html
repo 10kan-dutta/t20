@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tecnoesis</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Electrolize&display=swap" rel="stylesheet">
+</head>
+
+<style type="text/css">
+	
+
+
+		* {
+			font-family: 'Electrolize', sans-serif;
+		}
+
+
+		#stars{
+			position: fixed;
+			background-image: url("backweb.png");
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			top: 0;
+			left: 0;
+			z-index: -3;
+			width: 100vw;
+			height: calc(100% + 200px);
+			animation: brightness 2.5s;
+		}
+
+		@keyframes brightness{
+			from{filter: brightness(0%);}
+			to {filter: brightness(100%);}
+		}
+
+		#mars{
+			display: block;
+		    position: relative;
+		    z-index: -1;
+		    width: 100vw;
+		    height: calc(100% + 200px);
+    
+		}
+
+		#marsplanet{
+			top: 10vh;
+		    width: 100%;
+		    height: calc(100% + 200px);
+		    position: relative;
+		    left: 55%;
+		    transform: translate(-50%, -50%);
+		    animation: brightness 3s;
+		    animation-delay: 1.5s;
+		    filter: brightness(0%);
+		    animation-fill-mode: forwards;
+
+		}
+
+		@keyframes colorchange{
+			from{color: black;}
+			to {color: white;}
+		}
+
+
+		#logo{
+	    	position: absolute;
+		    height: 100vh;
+		    width: 100vw;
+		    /* top: 11vh; */
+		    /* left: 50%; */
+		    z-index: 10;
+		}
+
+		#teclogo{
+	    	height: 40%;
+		    width: 65%;
+		    top: 18vh;
+		    left: 50%;
+		    transform: translateX(-50%);
+		    z-index: 10;
+
+		}
+
+
+		#nebula{
+			position:absolute;
+			/*right:0;*/
+			width: 100vw;
+			height:100vh;
+			/*background:url("nebweb.png") top right no-repeat;*/
+			opacity:0.6;
+			z-index:-2;
+		}
+
+		#nebweb{
+			position:absolute;
+			width: 100vw;
+			height:100vh;
+			opacity:0.6;
+			z-index:-2;
+			
+		}
+
+
+
+
+
+</style>
+<body style="margin: 0; overflow-x: hidden;">
+
+	<div id="scene">
+
+		<div id="stars">
+			<div id="nebula">
+				<img src="nebweb.png" id="nebweb">
+			</div>
+			<div id="mars">
+					<img src="planetfull.png" id="marsplanet">
+				</div>
+
+		</div>
+
+		<div id="logo">
+					<img src="logo.png" style="position: absolute;" id="teclogo">
+		</div>
+		
+
+	</div>
+
+</body>
+</html>
